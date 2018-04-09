@@ -14,10 +14,9 @@ for file in "$@"
 do
   echo
   echo -e "${BLUE}Checking file: $file${NC}"
-  echo
   echo -e "${GREEN}Lines over 80 charcters: ${NC}"
   echo -e "${RED}$(grep -n '^.\{81\}' $file)${NC}" 
-  echo -ne "${GREEN}File Header: ${NC}" 
+  echo -e "${GREEN}File Header: ${NC}" 
   for header in "${fileHeaders[@]}"
   do
     found=$(head -n 15 $file | grep "$header")
@@ -26,6 +25,8 @@ do
       break
     fi
   done
+  echo -e "${GREEN}TODOs in the file: ${NC}"
+  echo -e "${RED}$(grep -n 'TODO' $file)${NC}" 
 
 
 done
