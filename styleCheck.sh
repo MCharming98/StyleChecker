@@ -3,7 +3,7 @@ GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 NC='\033[0m'
 
-fileHeaders=("Filename:" "Author:" "UserId:" "Description:" "Date:" "Source of help:")
+fileHeaders=("Filename:" "Author:" "Userid:" "Description:" "Date:" "Sources of help:")
 
 functionHeaders=("Function Name:" "Function Prototype: " "Description:" 
                 "Parameters:" "Side Effects:" "Error Conditions:" "Return Value:")
